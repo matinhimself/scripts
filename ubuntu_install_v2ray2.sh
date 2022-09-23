@@ -70,14 +70,7 @@ function getData()
         fi
     done
     
-    res=`host ${domain}`
-    res=`echo -n ${res} | grep ${IP}`
-    if [ -z "${res}" ]; then
-        echo -n "${domain} 解析结果："
-        host ${domain}
-        echo "主机未解析到当前服务器IP(${IP})!"
-        exit 1
-    fi
+   
 
     while true
     do
